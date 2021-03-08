@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: docker run
-        run: 'docker run csae8092/arche2sparql:latest --rm --env BGUSER="${{ secrets.BGUSER }}" --env BGPW="${{ secrets.BGPW }}"' 
+        run: 'docker run --rm --env BGUSER="${{ secrets.BGUSER }}" --env BGPW="${{ secrets.BGPW }}" csae8092/arche2sparql:latest' 
