@@ -5,7 +5,7 @@ BGUSER = os.environ.get('BGUSER')
 BGPW = os.environ.get('BGPW')
 
 triple_store = "https://arche-sparql.acdh-dev.oeaw.ac.at/sparql"
-arche_endpoint = "https://arche-dev.acdh-dev.oeaw.ac.at/api/"
+arche_endpoint = "https://arche.acdh.oeaw.ac.at/api/"
 client = ArcheToTripleStore(
     triple_store, arche_endpoint=arche_endpoint,
     user=BGUSER, pw=BGPW 
