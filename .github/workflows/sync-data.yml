@@ -9,6 +9,5 @@ jobs:
     name: Runs Data Sync Task
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: docker run
         run: 'docker run --rm --env BGUSER="${{ secrets.BGUSER }}" --env BGPW="${{ secrets.BGPW }}" csae8092/arche2sparql:latest' 

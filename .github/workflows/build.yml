@@ -1,20 +1,20 @@
 
-# name: Build and push to DockerHub
+name: Build and push to DockerHub
 
-# on:
-#   push:
-#     branches: 
-#       - master
+on:
+  push:
+    branches: 
+      - master
 
-# jobs:
-#   push_to_registry:
-#     name: Push Docker image to Docker Hub
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: docker build
-#         run: docker build -t csae8092/arche2sparql .
-#       - name: docker push
-#         run: |
-#           docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}" 
-#           docker push csae8092/arche2sparql
+jobs:
+  push_to_registry:
+    name: Push Docker image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: docker build
+        run: docker build -t csae8092/arche2sparql .
+      - name: docker push
+        run: |
+          docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}" 
+          docker push csae8092/arche2sparql
