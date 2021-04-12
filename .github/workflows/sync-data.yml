@@ -9,8 +9,7 @@ jobs:
     name: Runs Data Sync Task
     runs-on: ubuntu-latest
     steps:
-      - name: docker run
-        run: 'docker run --rm --env BGUSER="${{ secrets.BGUSER }}" --env BGPW="${{ secrets.BGPW }}" csae8092/arche2sparql:latest'
+      #- name: docker run
+      #  run: 'docker run --rm --env BGUSER="${{ secrets.BGUSER }}" --env BGPW="${{ secrets.BGPW }}" csae8092/arche2sparql:latest'
       - name: reset cache
-        run: |
-          curl --request POST 'https://rancher.acdh-dev.oeaw.ac.at/v3/project/c-zdbh8:p-2kf5k/workloads/deployment:phpproxy4bg:production?action=redeploy' --header 'Accept: application/json' --header 'Authorization: Bearer "${{ secrets.RANCHER_BARER_TOKEN }}"'
+        run: "curl --request POST 'https://rancher.acdh-dev.oeaw.ac.at/v3/project/c-zdbh8:p-2kf5k/workloads/deployment:phpproxy4bg:production?action=redeploy' --header 'Accept: application/json' --header 'Authorization: Bearer ${{ secrets.RANCHER_BARER_TOKEN }}'"
