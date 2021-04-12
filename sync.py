@@ -10,4 +10,5 @@ client = ArcheToTripleStore(
     triple_store, arche_endpoint=arche_endpoint,
     user=BGUSER, pw=BGPW 
 )
+client.delete_triples()
 top_cols = client.post_all_resources()
