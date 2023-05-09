@@ -11,7 +11,7 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: docker build
         run: docker build -t csae8092/arche2sparql .
       - name: docker push

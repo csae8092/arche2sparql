@@ -1,1 +1,1 @@
-acdh-arche-pyutils==0.7.0
+acdh-arche-pyutils
